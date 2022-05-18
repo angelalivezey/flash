@@ -1,3 +1,19 @@
 <resources>
+    <!--Login Screen-->
     <string name="app_name">Flash</string>
+    <string name="subtitle_text">Keep all your flashcard decks organized!</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="button_login_text">Login</string>
+
+    <!--My Decks Screen-->
+    <string name="title_my_decks">My Decks</string>
+    <string name="button_add_symbol">+</string>
+
+    <!--Add a New Deck Screen-->
+    <string name="title_add_a_new_deck">Add a new deck</string>
+    <string name="hint_new_deck_title">Title</string>
+    <string name="hint_new_deck_color">Color</string>
+    <string name="button_save_new_deck">Save</string>
+
 </resources>

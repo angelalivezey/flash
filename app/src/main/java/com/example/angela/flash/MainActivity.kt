@@ -1,11 +1,26 @@
 package com.example.angela.flash
 
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        window.statusBarColor = ContextCompat.getColor(this, R.color.background_purple)
+        supportActionBar?.setTitle("")
+        supportActionBar?.elevation = 0f
+        supportActionBar?.setBackgroundDrawable(
+            ColorDrawable(
+                ContextCompat.getColor(
+                    this,
+                    R.color.background_purple
+                )
+            )
+        )
+
+        setContentView(R.layout.login_fragment)
     }
 }

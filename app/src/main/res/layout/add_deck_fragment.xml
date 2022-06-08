@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="decksSharedViewModel"
+            type="com.example.angela.flash.DecksSharedViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_purple">
+
+        <TextView
+            android:id="@+id/title_add_new_deck"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/league_spartan_bold_font"
+            android:letterSpacing="-.05"
+            android:text="@string/title_add_a_new_deck"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/enter_deck_title_box"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="90dp"
+            android:background="@drawable/gradient_yellow"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:hint="@string/hint_new_deck_title"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dark_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_add_new_deck" />
+
+        <EditText
+            android:id="@+id/enter_deck_color_box"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="90dp"
+            android:background="@drawable/gradient_yellow"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:hint="@string/hint_new_deck_color"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dark_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enter_deck_title_box" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_save_new_deck"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="150dp"
+            android:background="@drawable/button_round_gradient_yellow"
+            android:text="@string/button_save_new_deck"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enter_deck_color_box" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

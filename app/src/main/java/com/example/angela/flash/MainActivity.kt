@@ -5,8 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.NavHostFragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
+   // private var recyclerView: RecyclerView? = null
+   // private lateinit var deckAdapter: DeckAdapter
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -22,11 +28,8 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
-        setContentView(R.layout.login_fragment)
-
-        val host: NavHostFragment = supportFragmentManager
-            .findFragmentById(R.id.fragmentContainerView) as NavHostFragment? ?: return
-        val navController = host.navController
-
+        setContentView(R.layout.activity_main)
     }
+
+
 }

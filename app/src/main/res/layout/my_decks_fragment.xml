@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="decksSharedViewModel"
+            type="com.example.angela.flash.DecksSharedViewModel" />
 
     </data>
 
@@ -50,11 +53,11 @@
             android:id="@+id/recycler_view_for_decks"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="35dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="32dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:foregroundGravity="center_horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

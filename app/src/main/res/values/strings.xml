@@ -15,5 +15,11 @@
     <string name="hint_new_deck_title">Title</string>
     <string name="hint_new_deck_color">Color</string>
     <string name="button_save_new_deck">Save</string>
+    <string-array name="deck_colors_array">
+        <item>Yellow</item>
+        <item>Purple</item>
+        <item>Blue</item>
+
+    </string-array>
 
 </resources>

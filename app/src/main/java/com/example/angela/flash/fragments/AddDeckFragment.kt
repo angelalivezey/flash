@@ -31,22 +31,23 @@ class AddDeckFragment : Fragment(R.layout.add_deck_fragment){
             inflater, R.layout.add_deck_fragment,
             container, false
         )
-        decksSharedViewModel = ViewModelProvider(this).get(DecksSharedViewModel::class.java)
-        decksSharedViewModel = decksSharedViewModel
-        var adapter = DeckAdapter(decksSharedViewModel.deckList)
+        decksSharedViewModel = ViewModelProvider(requireActivity()).get(DecksSharedViewModel::class.java)
+
+     //   var adapter = DeckAdapter(decksSharedViewModel.deckList)
+
         binding.buttonSaveNewDeck.setOnClickListener{
             var deck = Deck()
             deck.titleText = binding.enterDeckTitleBox.text.toString()
-            deck.color = binding.enterDeckColorBox.text.toString()
-            addNewDeck(deck)
-            adapter.notifyDataSetChanged()
+           // deck.color = binding.enterDeckColorBox.text.toString()
+            decksSharedViewModel.addNewDeck(deck)
+
+          //  adapter.setData(decksSharedViewModel.deckList)
             findNavController().navigate(R.id.action_addDeckFragment_to_myDecksFragment)
+           // adapter.setData(decksSharedViewModel.deckList)
 
         }
      return binding.root
     }
 
-    fun addNewDeck(deck: Deck){
-        decksSharedViewModel.deckList.add(deck)
-    }
+
 }

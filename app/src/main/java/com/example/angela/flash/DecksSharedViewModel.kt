@@ -5,8 +5,11 @@ import androidx.lifecycle.ViewModel
 class DecksSharedViewModel : ViewModel() {
 
     var deckList: MutableList<Deck> = mutableListOf(
-        Deck("Music", "pink"),
-        Deck("Art History", "orange"),
-        Deck("Kotlin","purple"))
-
+        Deck("Music", "yellow"),
+        Deck("Art History", "yellow"),
+        Deck("Kotlin", "blue"),
+    )
+    fun addNewDeck(deck: Deck){
+        deckList.add(deck)
+    }
 }

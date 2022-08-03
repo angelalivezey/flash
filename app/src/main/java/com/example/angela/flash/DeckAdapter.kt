@@ -1,13 +1,10 @@
 package com.example.angela.flash
 
-import android.content.Context
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.annotation.NonNull
-import androidx.cardview.widget.CardView
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 
 class DeckAdapter(private var deckList: MutableList<Deck>) : RecyclerView.Adapter<DeckAdapter.ViewHolder>() {
@@ -29,6 +26,13 @@ class DeckAdapter(private var deckList: MutableList<Deck>) : RecyclerView.Adapte
     override fun onBindViewHolder(holder: DeckAdapter.ViewHolder, position: Int) {
        val deck = deckList[position]
         holder.deckTitle.text = deck.titleText
+    }
+
+    fun setData(newDeckList: MutableList<Deck>){
+        val diffUtil = DeckDiffUtil(deckList, newDeckList)
+        val diffResults = DiffUtil.calculateDiff(diffUtil)
+        deckList = newDeckList
+        diffResults.dispatchUpdatesTo(this)
     }
 
 
